@@ -5,6 +5,13 @@ along with patches to those drivers.
 Because those drivers are not stored in git, understanding the diffs between them can be difficult.
 For that reason, this repository contains different versions of the same driver in an attempt to capture exactly the contents of each version byte for byte.
 
+## Patch descriptions
+
+* `<asm/unaligned.h>` is now `<linux/unaligned.h>` on v6.12.0 and newer
+* `#undef CONFIG_GPIOLIB`
+  * `gpiochip_add` is not defined anywhere I could find, but `gpiochip_add_data` has a similar name
+    * https://www.kernel.org/doc/html/v6.12/driver-api/gpio/index.html#c.gpiochip_add_data
+
 ## Other repositories
 
 There exist many repositories containing Exar/MxL USB Serial Driver source code, many with patches applied to them.

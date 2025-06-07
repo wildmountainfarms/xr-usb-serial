@@ -1,5 +1,9 @@
 Exar/MxL USB Serial Driver
 ======================
+Version Unofficial
+    Fix <asm/unaligned.h> include
+    Undefine CONFIG_GPIOLIB so gpiochip_add does not break compile
+
 Version 1G  2024/07/08
 	Fix GPIO related compile error
 	Fix tty driver related calls for changes up to Kernel 6.8

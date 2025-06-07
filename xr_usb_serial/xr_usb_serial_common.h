@@ -75,6 +75,8 @@
 #define RAMCTL_BUFFER_FRAME                                0x4
 #define RAMCTL_BUFFER_OVERRUN                              0x8
 
+#undef CONFIG_GPIOLIB
+
 struct xr_usb_serial_wb {
 	unsigned char *buf;
 	dma_addr_t dmah;

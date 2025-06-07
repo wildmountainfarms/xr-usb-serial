@@ -51,9 +51,16 @@
 #include <linux/usb.h>
 #include <linux/usb/cdc.h>
 #include <asm/byteorder.h>
-#include <asm/unaligned.h>
-#include <linux/list.h>
+
 #include "linux/version.h"
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 12, 0)
+#include <linux/unaligned.h>
+#else
+#include <asm/unaligned.h>
+#endif
+
+#include <linux/list.h>
 #include <asm/io.h>
 #include <linux/gpio.h>
 #include <linux/gpio/driver.h>
